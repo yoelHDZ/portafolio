@@ -1,0 +1,104 @@
+:root {
+    --accent-color: #00f2fe;
+    --gradient-bg: linear-gradient(135deg, #0072ff 0%, #00f2fe 100%);
+}
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #0b0f19;
+    color: #f8f9fa;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el footer quede abajo si hay poco contenido */
+}
+
+/* --- ESTILOS COMPARTIDOS (Deben estar en tu style.css) --- */
+.navbar {
+    backdrop-filter: blur(10px);
+    background-color: rgba(11, 15, 25, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.navbar-brand {
+    font-weight: 800;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand-text {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.navbar-logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+    color: var(--accent-color) !important;
+}
+
+/* Estilos del Footer */
+footer {
+    margin-top: auto; /* Empuja el footer al final de la página */
+    background-color: rgba(11, 15, 25, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 0;
+}
+.social-icon {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+.social-icon:hover {
+    color: var(--accent-color);
+}
+
+/* --- ESTILOS ESPECÍFICOS DE ESTA PÁGINA --- */
+.hero-section {
+    flex: 1; /* Ocupa el espacio restante */
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+.text-gradient {
+    background: var(--gradient-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.btn-custom {
+    background: var(--gradient-bg);
+    color: #000;
+    font-weight: 600;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+.btn-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 242, 254, 0.3);
+    color: #000;
+}
+.btn-outline-custom {
+    border: 2px solid #00f2fe;
+    color: #00f2fe;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.btn-outline-custom:hover {
+    background: var(--gradient-bg);
+    color: #000;
+    border-color: transparent;
+}
